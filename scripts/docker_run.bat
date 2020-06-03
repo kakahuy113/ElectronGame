@@ -1,0 +1,1 @@
+docker run --rm --privileged -e DISPLAY=192.168.1.102:0.0 e-snake

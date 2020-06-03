@@ -1,0 +1,28 @@
+{
+  "name": "e-snake",
+  "version": "1.0.0",
+  "description": "Simple Electron based snake game",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "test",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kakahuy113/ElectronGame.git"
+  },
+  "keywords": [
+    "snake",
+    "electron",
+    "brython"
+  ],
+  "author": "Huy Tran <kakahuy113@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kakahuy113/ElectronGame/issues"
+  },
+  "homepage": "https://github.com/kakahuy113/ElectronGame#readme",
+  "dependencies": {
+    "electron": "^8.2.5"
+  }
+}
