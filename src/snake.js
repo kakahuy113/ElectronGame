@@ -1,6 +1,6 @@
 (function () {
   const ipc = require("electron").ipcRenderer;
-  const { ipcRenderer } = require("electron");
+  
   const blockSize = 10;
   const initialFps = 15;
   const fpsIncrement = 3;
@@ -116,14 +116,14 @@
     }
 
     clear();
-    ctx.fillStyle = "rgb(200, 0, 0)";
+    ctx.fillStyle = "rgb(255, 238, 0)";
     newSnake.forEach(([x, y]) => ctx.fillRect(x, y, blockSize, blockSize));
-    ctx.fillStyle = "rgb(255, 255, 255)";
+    ctx.fillStyle = "rgb(0, 0, 0)";
     if (food) ctx.fillRect(food[0], food[1], blockSize, blockSize);
 
     if (hasCollision(newSnake)) {
-      alert(ipcRenderer.sendSync("lose"));
-      alert(ipcRenderer.sendSync("Again"));
+      alert(ipc.sendSync("lose"));
+      alert(ipc.sendSync("Again"));
       displayScore(0);
       return initState();
     }

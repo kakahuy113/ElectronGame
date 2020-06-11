@@ -18,13 +18,11 @@ const createWindow = () => {
   });
 };
 
-const { ipcMain } = require("electron");
-
-ipcMain.on("lose", (event, arg) => {
+ipc.on("lose", (event, arg) => {
   event.returnValue = "You Lose !";
 });
 
-ipcMain.on("Again", (event, arg) => {
+ipc.on("Again", (event, arg) => {
   event.returnValue = "Play Again !";
 });
 
